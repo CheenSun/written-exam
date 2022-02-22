@@ -7,8 +7,7 @@ import sys
 def expr_func(args: list):
     index = 0
     while True:
-        if '+'in args or '-' in args or '*' in args or '/' in args:
-
+        if '+' in args or '-' in args or '*' in args or '/' in args:
             if args[index] in list('+-*/'):
                 if index < 2:
                     raise ValueError("错误的逆波兰表达式")
@@ -45,6 +44,5 @@ def expr_func(args: list):
 if __name__ == "__main__":
     print("第二题")
     args_ = sys.argv[1:]
-    print(args_)
     print(f"args is{args_}")
     print(expr_func(list(args_[0])))
